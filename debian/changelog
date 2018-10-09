@@ -1,0 +1,12 @@
+rfoo (1.3.0-2) unstable; urgency=low
+
+  * Change name of script (Closes: #664993)
+    - rconsole -> rfoo-rconsole (due to conflicts with remote-tty)
+
+ -- Jerome Kieffer <jerome.kieffer@esrf.fr>  Sun, 25 Mar 2012 09:45:20 +0100
+
+rfoo (1.3.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #663706)  
+
+ -- Jerome Kieffer <jerome.kieffer@esrf.fr>  Sat, 17 Mar 2012 18:45:20 +0100

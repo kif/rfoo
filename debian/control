@@ -1,0 +1,42 @@
+Source: rfoo
+Maintainer: Jerome Kieffer <jerome.kieffer@esrf.fr>
+Section: python
+Priority: extra
+Build-Depends: python-setuptools, python-all-dev (>= 2.5), debhelper (>= 9), cython
+Standards-Version: 3.9.2
+Homepage: https://github.com/aaiyer/rfoo
+XS-Python-Version: >= 2.5
+
+Package: python-rfoo
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}, python2.7
+Description: Fast RPC package for Python - Python 2
+ Rfoo (remote foo) is a fast Python RPC package which can do 160,000 RPC calls
+ per second on a regular PC. It includes a fast serialization module called
+ rfoo.marsh which extends the Python built in marshal module by eliminating
+ serialization of code objects and protecting against bad input. The result is
+ a safe to use ultra fast serializer.
+ .
+ Included with rfoo is rconsole, a remote Python console with auto completion,
+ which can be used to inspect and modify the namespace of a running script.
+
+
+Package: python3-rfoo
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}, python
+Description: Fast RPC package for Python - Python 3
+ Rfoo (remote foo) is a fast Python RPC package which can do 160,000 RPC calls
+ per second on a regular PC. It includes a fast serialization module called
+ rfoo.marsh which extends the Python built in marshal module by eliminating
+ serialization of code objects and protecting against bad input. The result is
+ a safe to use ultra fast serializer.
+ .
+ Included with rfoo is rconsole, a remote Python console with auto completion,
+ which can be used to inspect and modify the namespace of a running script.
+
+Package: rfoo-rconsole
+Architecture: any
+Depends: python3-rfoo
+Description: Remote control script for inspecting live a Python script
+
+

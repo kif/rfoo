@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python2 --buildsystem=python_distutils
+
+clean:
+	dh_clean
+	rm -f rfoo/marsh.c
+	rm -f scripts/rfoo-rconsole
+	rm -rf build
+
