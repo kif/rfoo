@@ -1,10 +1,10 @@
 Format: http://dep.debian.net/deps/dep5
 Upstream-Name: rfoo
-Source: http://rfoo.googlecode.com/files/rfoo-1.3.0.tar.gz  
+Source: https://github.com/aaiyer/rfoo/archive/master.zip  
 
 Files: *
 Copyright:  2010 Nir Aides <nir@winpdb.org> and individual contributors.
-License: BSD
+License: BSD-3-clause 
 
 Files: debian/*
 Copyright: 2012 Jerome Kieffer <jerome.kieffer@esrf.fr>
@@ -27,7 +27,7 @@ License: GPL-2.0+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-License: BSD
+License: BSD-3-clause 
  Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
  .

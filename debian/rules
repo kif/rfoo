@@ -1,11 +1,20 @@
 #!/usr/bin/make -f
 
-%:
-	dh $@ --with python2 --buildsystem=python_distutils
+#export DH_VERBOSE=1
+export PYBUILD_NAME=rfoo
 
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/rfoo-rconsole/usr/bin
+	mv debian/python3-rfoo/usr/bin/rconsole debian/rfoo-rconsole/usr/bin/rfoo-rconsole
+	rm -rf  debian/python-rfoo/usr/bin/rconsole
+	
 clean:
 	dh_clean
+	rm -rf .pybuild
 	rm -f rfoo/marsh.c
-	rm -f scripts/rfoo-rconsole
 	rm -rf build
-
+	rm -rf MANIFEST
